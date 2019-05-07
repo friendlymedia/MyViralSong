@@ -1,0 +1,30 @@
+<!--Top SONGS >>4 column semantic-->
+
+<div class="four wide column">
+    <div class="ui middle aligned celled list ">
+        <div class="item">
+            <!--Section Vote LIKE counter description-->
+            <div class="right floated content">
+                 <div class="ui icon button" data-tooltip="Viral Vote" >
+                    <ul class="ui big horizontal list">
+                        <div (click)="voteUp()">
+                            <i class=" large thumbs up outline icon" ></i> {{ songs?.votes}}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!--Section Song description-->
+            <!-- it shows in the interface the input of the form add songs -->
+            <div class="content">
+                <a class="ui large header" href="{{ songs?.url }}" target="_blank" >{{ songs?.title }} </a>
+                <div class="ui medium header">{{ songs?.artist}}</div>
+                <div class="description">Genre: #{{ songs?.genre }} </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,32 @@
+
+ <!--Index logo main page-->
+<div class="ui equal width grid">
+  <div class="ui center aligned row">
+      <div class=" one wide column"></div>
+        <div class="fourteen wide column">
+          <h1 class="ui center aligned icon header">
+              <img class="ui centered large image"  src="assets/img/logo4LL.png">
+          </h1>
+          <!--Main button Create event and Join event-->
+          <div class="ui two column centered grid">
+              <div class="ui stackable two column grid">
+                 <div class="column">
+                    <button class="huge ui red button" (click)="CreateEventbtn()">
+                      CREATE EVENT
+                    </button>
+                  </div>
+                  <div class="column">
+                    <button class="huge ui red button" (click)="JoinEventbtn()">
+                      JOIN EVENT
+                    </button>
+                  </div>
+              </div>
+          </div>
+       </div>
+      <div class="one wide column"></div>
+    </div>
+</div>
+<!--Generate form Crate and Join-->
+<app-create-form></app-create-form>
+<app-join-form></app-join-form>
+

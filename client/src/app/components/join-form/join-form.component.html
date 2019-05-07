@@ -1,0 +1,30 @@
+
+<!--Join Event form content -->
+<div class="ui modal" id="Join">
+    <i class="close icon"></i>
+    <div class="header">
+      Join Event
+    </div>
+      <form  #JoinEvent="ngForm" >
+          <mat-form-field appearance="outline">
+              <mat-label>User Name</mat-label>
+              <input matInput name="UserName" ngModel type="UserName" placeholder="User Name" #UserNameInput="ngModel" required UserName>
+              <mat-icon matSuffix>person</mat-icon>
+              <mat-error *ngIf="UserNameInput.invalid">Please enter a User Name.</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> EventCode </mat-label>
+              <input type="EventCode" name="EventCode" ngModel matInput placeholder="EventCode" #EventCodeInput="ngModel" required>
+              <mat-icon matSuffix>lock_open</mat-icon>
+              <mat-error *ngIf="EventCodeInput.invalid">Please enter an Event Code.</mat-error>
+            </mat-form-field>
+      </form>
+
+      <!-- we call the action  to pass the data to the back end trough an event click -->
+    <div class="actions">
+      <div class="ui approve red button" routerLink="/index/songsListed"
+        routerLinkActive="router-link-active" (click)="OnJoinEvent()">
+        <i class="music icon"></i> Join Event
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,120 @@
+<!--Event Information-->
+<div class="ui top attached header">
+ Party Name: Test Event
+    <!--Shared Icon-->
+    <i class="right floated share alternate icon"(click)="PopUpShareCodeBtn()" ></i>
+</div>
+<div class="ui attached segment">
+  <div class="content">
+    <img class="right floated mini ui image" src="assets/img/bola2.png">
+    <div class="meta">
+       HostName: Test user
+    </div>
+    </div>
+    <div class="extra content">
+      <a>
+        <!--Count of how many users are connect it to the app-->
+        <i class="user icon right "></i>
+          1 Guest
+      </a>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <!-- this action shows a pop up modal where a form for adding songs will appear -->
+        <button class="ui inverted red button" (click)="PopUpBtn()">Add Songs to the Votinglist</button>
+      </div>
+    </div>
+</div>
+
+<!--Form Shared Party Code-->
+<div class="ui mini modal" id="miniModalShare">
+  <div class="content">
+      <form class="ui form" >
+        <!-- Form field Title -->
+          <div class="field">
+              <h1><label for="title">PartyCode </label></h1>
+              c59abc376d2649ceb3df8dc0d2d2a5b7
+          </div>
+      </form>
+   </div>
+</div>
+
+<!--FORM ADD SONG-->
+<div class="ui mini modal" id="miniModal">
+  <div class="content">
+      <form class="ui form">
+        <div class="form-group">
+        <!-- Form field Title -->
+          <div class="field">
+              <label for="title">Title: </label>
+              <input
+                  #newtitle
+                  name="title"
+                  [ngModel]=""
+                  type="text"
+                  placeholder="Add a Title"
+                  class="form-control"
+                  autofocus
+                  />
+          </div>
+         <!-- Form field artist -->
+          <div class="field">
+                  <label for="artist">artist: </label>
+                  <input
+                      #newartist
+                      name="artist"
+                      [ngModel]=""
+                      type="text"
+                      placeholder="Add a artist"
+                      class="form-control"
+                      />
+          </div>
+        <!--  Form field Genre -->
+          <div class="field">
+                  <label for="genre">Genre: </label>
+                  <input
+                      #newgenre
+                      name="genre"
+                      type="text"
+                      placeholder="Add the Genre"
+                      class="form-control"
+                      />
+          </div>
+          <!--Form field url -->
+          <div class="field">
+              <label for="url">url: </label>
+                  <div class="ui labeled input">
+                      <div class="ui label">
+                      http://
+                  </div>
+                  <input
+                  #newurl
+                  name="url"
+                  [ngModel]=""
+                  type="text"
+                  placeholder="Add the url"
+                  class="form-control"
+                  />
+              </div>
+          </div>
+        </div>
+        </form>
+      <!--button submit addSong-->
+      </div>
+          <div class="actions" >
+              <div class="ui  approve   button" (click)="addSong(newtitle, newartist, newgenre, newurl)"
+                type="submit" >
+                Add</div>
+              <div class="ui  cancel  button">Go Back</div>
+          </div>
+     </div>
+
+     <!-- it shows the sorted songs once it start voting for each of them
+      so that the songs with more votes will be sorted accordingly   -->
+
+    <app-songs
+      *ngFor="let songs of sortedSongs(); let i= index"
+      [songs]="songs">
+
+    </app-songs>
+

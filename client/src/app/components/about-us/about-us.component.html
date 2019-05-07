@@ -1,0 +1,140 @@
+
+<!--Nav var MiViralsong with icon -->
+<div class="ui inverted menu">
+  <a class="white item active" (click)="HideMenu()">
+      <img class="ui image" width=38 src="assets/img/logo2.png">
+      <div class="content">
+          <div class="header">MyViralSong</div>
+      </div>
+    </a>
+</div>
+
+<!-- black square middle-->
+<div class="ui celled grid">
+  <div class = 'black row'>
+    <!-- MENU >> take 3 columns left side-->
+  <div class="ui container computer only three wide column">
+      <div class="ui inverted vertical menu" >
+          <a class="item" routerLink="/index/">
+            Home
+          </a>
+          <a class="item" routerLink="/index/about-us/"
+          routerLinkActive="router-link-active">
+            About us
+          </a>
+          <a class="item" routerLink="/index/songsListed/"
+          routerLinkActive="router-link-active">
+            Voting List
+          </a>
+      </div>
+    </div>
+
+    <!--this is about us-->
+
+    <div class=" thirteen wide column">
+      <div class="ui segment">
+        <h1 class="ui left aligned header " > We are Friendly Media</h1>
+          <h3 class="ui left aligned header">
+              A Dublin base company passionate about creating enjoyable digital products!
+              We believe that continuous research helps us to understand customer's needs.
+          </h3>
+          <h1 class="ui right aligned header">
+            MyViralSong v01
+          </h1>
+          <h3 class="ui right aligned header">
+              We are small team of highly - empowered super motivated colleagues where people can freely exchange ideas.
+              Hopefully you like our first version MyViralSong
+          </h3>
+
+
+
+        <div class="ui stackable two column grid">
+            <div class="column">
+                  <div class="ui people shape">
+                          <a class="ui red card">
+                            <div class="ui medium image">
+                              <img src="assets/img/Profile2.jpg">
+                            </div>
+                            <div class="extra content">
+                              <span class="right floated">
+                                Team Member
+                              </span>
+                              <span>
+                                <i class="user icon"></i>
+                                Ana Maria
+                              </span>
+                            </div>
+                          </a>
+                    </div>
+            </div>
+            <div class="column">
+                  <div class="ui people shape">
+                          <a class="ui orange card">
+                            <div class="ui medium image">
+                              <img src="assets/img/Profile1.jpg">
+                            </div>
+                            <div class="extra content">
+                              <span class="right floated">
+                                  Team Member
+                              </span>
+                              <span>
+                                <i class="user icon"></i>
+                                Daniela
+                              </span>
+                            </div>
+                          </a>
+                    </div>
+            </div>
+          </div>
+
+          <div class="ui stackable two column grid">
+              <div class="column">
+                    <div class="ui people shape">
+                            <a class="ui yellow card">
+                              <div class="ui medium image">
+                                <img src="assets/img/Profile3.jpg">
+                              </div>
+                              <div class="extra content">
+                                <span class="right floated">
+                                    Team Member
+                                </span>
+                                <span>
+                                  <i class="user icon"></i>
+                                  Yacehelis
+                                </span>
+                              </div>
+                            </a>
+                      </div>
+              </div>
+              <div class="column">
+                    <div class="ui people shape">
+                            <a class="ui olive card">
+                              <div class="ui medium image">
+                                <img src="assets/img/Profile.JPG">
+                              </div>
+                              <div class="extra content">
+                                <span class="right floated">
+                                    Team Member
+                                </span>
+                                <span>
+                                  <i class="user icon"></i>
+                                  Yuribeth
+                                </span>
+                              </div>
+                            </a>
+                      </div>
+              </div>
+            </div>
+
+     </div>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<div class="ui inverted vertical footer segment">
+  <div class="ui center aligned container">
+    &copy; &nbsp; Copyright 2019 &nbsp;|&nbsp;&nbsp;Friendly Media Team &nbsp;|&nbsp;All Rights Reserved
+  </div>
+</div>
+<!-- this component allows me to show the side bar once we are in a mobile view  -->
+<app-mobile-side-bar></app-mobile-side-bar>

@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+ <!-- black square middle-->
+<div class="pusher">
+  <div class="ui celled grid">
+    <div class = 'black row'>
+      <!-- MENU >> take 3 columns left side-->
+      <div class="ui container computer only three wide column">
+        <div class="ui inverted vertical menu" >
+            <a class=" item" routerLink="/index/">
+              Home
+            </a>
+            <a class="item" routerLink="/index/about-us/"
+            routerLinkActive="router-link-active">
+              About us
+            </a>
+
+        </div>
+      </div>
+      <!--this is our application, with rest of the columns
+      where you can see all the song votes event name host name and number of guest conecte it -->
+
+      <div class=" thirteen wide column">
+        <div class="ui segment">
+          <h2 class="ui center aligned header "> MyViralSong List</h2>
+          <div class="ui  list">
+            <a class="item">
+              <app-event></app-event>
+            </a>
+          </div>
+          <app-mobile-side-bar></app-mobile-side-bar>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--footer-->
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      &copy; &nbsp; Copyright 2019 &nbsp;|&nbsp;&nbsp;Friendly Media Team &nbsp;|&nbsp;All Rights Reserved
+    </div>
+  </div>
+
+
+
+
+

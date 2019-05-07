@@ -1,0 +1,9 @@
+.ui.approve.button{
+  position: relative;
+  margin-left: 5px;
+}
+
+.ui.cancel.button{
+  position: relative;
+  margin-right: 80px;
+}

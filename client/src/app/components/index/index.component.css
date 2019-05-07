@@ -1,0 +1,24 @@
+
+.ui.equal.width.grid{
+  background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  width: 100%;
+  height: 100%;
+  margin:0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.ui.centered.large.image{
+  width: 345px;
+}
+
+.ui.center.aligned.icon.header{
+  margin-top: 0px;
+}
+
+
+.ui.two.column.centered.grid{
+  margin-left: 0px;
+}

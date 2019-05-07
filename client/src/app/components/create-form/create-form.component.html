@@ -1,0 +1,29 @@
+<!--Create Event form-->
+<div class="ui modal" id="Create">
+  <i class="close icon"></i>
+  <div class="header">
+    Create Your Event
+  </div>
+    <form  #CreateEvent="ngForm">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Host Name</mat-label>
+            <input matInput name="hostName" ngModel type="hostName" placeholder="Host Name" #hostNameInput="ngModel" required hostName>
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="hostNameInput.invalid">Please enter a hostName.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label> EventParty </mat-label>
+            <input type="EventParty" name="EventParty" ngModel matInput placeholder="EventParty" #EventPartyInput="ngModel" required>
+            <mat-icon matSuffix>speaker</mat-icon>
+            <mat-error *ngIf="EventPartyInput.invalid">Please enter an EventParty.</mat-error>
+          </mat-form-field>
+    </form>
+<!-- this is the button where the event click is sending the data to the method pass to it -->
+  <div class="actions" >
+    <div class="ui approve red button" routerLink="/index/songsListed"
+        routerLinkActive="router-link-active" (click)="OnCreateEvent()" >
+       <i class="music icon"></i> Create Event
+    </div>
+  </div>
+</div>

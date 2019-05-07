@@ -1,0 +1,11 @@
+.column{
+  text-align: center;
+}
+
+.p{
+  color: black;
+}
+
+ .ui.piled.segment{
+  z-index: 1;
+}

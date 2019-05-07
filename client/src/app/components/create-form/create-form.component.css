@@ -1,0 +1,9 @@
+ui.positive.right.labeled.icon.button, a{
+  position: center;
+}
+
+mat-form-field {
+  position: relative;
+  margin-left: 5%;
+  width: 90%;
+}
